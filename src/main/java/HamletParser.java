@@ -51,4 +51,41 @@ public class HamletParser {
         return newPoem;
     }
 
+    public  String changeHoratioToTariq(){
+        Pattern pattern =Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE);
+        Matcher matcher=pattern.matcher(hamletData);
+        boolean matchFound = matcher.find();
+        String newPoem=hamletData;
+
+        if(matchFound){
+            newPoem = matcher.replaceAll("Tariq");
+        }
+
+        return newPoem;
+    }
+    public String FindHoratio() {
+        Pattern pattern =Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE);
+        Matcher matcher=pattern.matcher(hamletData);
+        boolean matchFound = matcher.find();
+        String newPoem=hamletData;
+
+        if(matchFound){
+            newPoem= pattern.pattern();
+        }
+
+        return newPoem;
+    }
+
+    public String FindHamlet() {
+        Pattern pattern =Pattern.compile("Hamlet", Pattern.CASE_INSENSITIVE);
+        Matcher matcher=pattern.matcher(hamletData);
+        boolean matchFound = matcher.find();
+        String newPoem=hamletData;
+
+        if(matchFound){
+            newPoem= pattern.pattern();
+        }
+
+        return newPoem;
+    }
 }

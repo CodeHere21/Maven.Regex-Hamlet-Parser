@@ -28,13 +28,40 @@ public class HamletParserTest {
 
     @Test
     public void testChangeHoratioToTariq() {
+        //
+
+        //
+        String actual=hamletParser.changeHoratioToTariq();
+        System.out.println(actual);
+        //
+
+        Assert.assertFalse(actual.contains("Horatio"));
     }
 
     @Test
     public void testFindHoratio() {
+        //
+
+        //
+        String expected="Horatio";
+        String actual=hamletParser.FindHoratio();
+        System.out.println(actual);
+        //
+
+        Assert.assertEquals(expected,actual);
+
     }
 
     @Test
     public void testFindHamlet() {
+        //
+
+        //
+        String expected="Hamlet";
+        String actual=hamletParser.FindHamlet();
+        System.out.println(actual);
+        //
+
+        Assert.assertEquals(expected,actual);
     }
 }
